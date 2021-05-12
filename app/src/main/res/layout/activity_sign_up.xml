@@ -5,34 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".LoginActivity">
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        app:cardElevation="15dp"
-        app:cardCornerRadius="12dp">
-
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:src="@drawable/ic_baseline_warning_24"
-            android:background="@color/purple_500"/>
-
-    </androidx.cardview.widget.CardView>
+    tools:context=".SignUpActivity">
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:padding="20dp">
+        android:layout_centerInParent="true">
 
         <EditText
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:id="@+id/loginPhone"
+            android:id="@+id/signUpPhone"
             android:hint="Enter your phone"
             android:textColorHint="@color/grey"
             android:background="@drawable/edit_text_bg"
@@ -44,23 +27,37 @@
         <EditText
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:id="@+id/loginPassword"
+            android:id="@+id/signUpEmail"
+            android:layout_below="@id/signUpPhone"
+            android:hint="Enter your email"
+            android:textColorHint="@color/grey"
+            android:background="@drawable/edit_text_bg"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/signUpPassword"
             android:hint="Enter your password"
             android:inputType="textPassword"
-            android:textColorHint="@color/grey"
             android:layout_marginTop="10dp"
+            android:textColorHint="@color/grey"
             android:background="@drawable/edit_text_bg"
             android:drawableStart="@drawable/ic_baseline_lock_24"
             android:drawablePadding="5dp"
-            android:layout_below="@id/loginPhone"
+            android:layout_below="@id/signUpEmail"
             android:padding="15dp"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/loginButton"
-            android:layout_below="@id/loginPassword"
-            android:text="Login"
+            android:id="@+id/signUpButton"
+            android:layout_below="@id/signUpPassword"
+            android:text="Sign Up"
             android:layout_marginTop="20dp"
             android:padding="10dp"
             android:paddingStart="20dp"
@@ -75,12 +72,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Not a user? Sign up!"
-            android:layout_below="@id/loginButton"
+            android:text="Already a user? Login!"
+            android:layout_below="@id/signUpButton"
             android:textSize="16sp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:id="@+id/moveToSignUp"
+            android:id="@+id/moveToLogin"
             android:clickable="true"
             android:textColor="@color/black"/>
 

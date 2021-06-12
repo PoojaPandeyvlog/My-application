@@ -7,21 +7,29 @@
     android:background="@color/white"
     tools:context=".LoginActivity">
 
-    <androidx.cardview.widget.CardView
+    <View
         android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/view"
+        android:background="@color/pink_5"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/view"
+        android:background="@drawable/ic_wave"/>
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        app:cardElevation="15dp"
-        app:cardCornerRadius="12dp">
-
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:src="@drawable/ic_baseline_warning_24"
-            android:background="@color/purple_500"/>
-
-    </androidx.cardview.widget.CardView>
+        android:text="Suraksha"
+        android:textStyle="bold"
+        android:drawableEnd="@drawable/ic_heart"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/white"
+        android:textSize="40dp" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -29,34 +37,52 @@
         android:layout_centerInParent="true"
         android:padding="20dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log In To An Exsting Account:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/loginTextView"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/pink_5"/>
+
         <EditText
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/loginPhone"
-            android:hint="Enter your phone"
-            android:textColorHint="@color/grey"
+            android:hint="Enter phone"
+            android:textColor="@color/black"
+            android:layout_below="@id/loginTextView"
+            android:textColorHint="@color/dark_grey"
+            android:layout_marginTop="10dp"
             android:background="@drawable/edit_text_bg"
             android:drawableStart="@drawable/ic_baseline_phone_24"
             android:drawablePadding="5dp"
             android:inputType="phone"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:padding="15dp"/>
 
         <EditText
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/loginPassword"
-            android:hint="Enter your password"
+            android:hint="Enter password"
             android:inputType="textPassword"
-            android:textColorHint="@color/grey"
+            android:textColorHint="@color/dark_grey"
             android:layout_marginTop="10dp"
+            android:textColor="@color/black"
             android:background="@drawable/edit_text_bg"
             android:drawableStart="@drawable/ic_baseline_lock_24"
             android:drawablePadding="5dp"
             android:layout_below="@id/loginPhone"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:padding="15dp"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/loginButton"
             android:layout_below="@id/loginPassword"
@@ -82,8 +108,69 @@
             android:layout_marginTop="10dp"
             android:id="@+id/moveToSignUp"
             android:clickable="true"
-            android:textColor="@color/black"/>
+            android:textColor="@color/pink_5"
+            android:focusable="true" />
 
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or Make An Emergency Call:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:textColor="@color/pink_5"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sosButton"
+        android:clickable="true"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentBottom="true"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/card_background">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Call Police"
+                    android:id="@+id/callPoliceText"
+                    android:layout_centerVertical="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/callPoliceText"
+                    android:src="@drawable/ic_baseline_warning_24"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
 
 </RelativeLayout>

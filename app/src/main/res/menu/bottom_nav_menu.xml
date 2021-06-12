@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/miHome"
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"/>
+
+    <item android:id="@+id/miTips"
+        android:title="Martial Arts"
+        android:icon="@drawable/ic_martial_arts"/>
+
+    <item android:id="@+id/miShop"
+        android:title="Shop"
+        android:icon="@drawable/ic_shopping_cart"/>
+
+</menu>

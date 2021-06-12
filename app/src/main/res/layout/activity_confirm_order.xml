@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ConfirmOrderActivity">
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Items: "-->
+<!--        android:textSize="20sp"-->
+<!--        android:textColor="@color/pink_5"-->
+<!--        android:id="@+id/items"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:textStyle="bold"/>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: ₹ 500.00"
+        android:textSize="20sp"
+        android:textColor="@color/pink_5"
+        android:id="@+id/totalAmount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter OTP"
+        android:padding="15dp"
+        android:id="@+id/otpEditText"
+        android:textColorHint="@color/dark_grey"
+        android:layout_below="@id/totalAmount"
+        android:drawableStart="@drawable/ic_baseline_phone_iphone_24"
+        android:layout_margin="40dp"
+        android:drawablePadding="5dp"
+        android:background="@drawable/edit_text_bg"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/white"
+        android:id="@+id/confirmButton"
+        android:layout_below="@id/otpEditText"
+        android:layout_centerHorizontal="true"
+        android:text="Confirm Order"/>
+
+</RelativeLayout>

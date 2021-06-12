@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_pocket_knife"
+                android:id="@+id/cartIcon"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/cartIcon"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Product Name"
+                    android:textSize="18dp"
+                    android:id="@+id/cartTitle"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:padding="3dp"
+                        android:id="@+id/quantityLayout"
+                        android:layout_below="@id/cartTitle"
+                        android:background="@drawable/cart_qty_bg">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:padding="5dp"
+                            android:id="@+id/addItemButton"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_add_item"
+                            android:background="@color/grey"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:id="@+id/cartQty"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"/>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:padding="5dp"
+                            android:id="@+id/removeItemButton"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_remove_item"
+                            android:background="@color/grey"/>
+
+                    </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 500.00"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:id="@+id/cartPrice" />
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:layout_alignParentEnd="true">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="₹ 500.00"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="18dp"-->
+<!--                    android:id="@+id/cartPrice" />-->
+
+<!--                <ImageButton-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:id="@+id/cartAdd"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:src="@drawable/ic_baseline_add_24"-->
+<!--                    android:background="@drawable/add_button_bg"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_below="@id/cartPrice"/>-->
+
+<!--                <ImageButton-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:id="@+id/cartRemove"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:visibility="invisible"-->
+<!--                    android:src="@drawable/ic_baseline_delete_24"-->
+<!--                    android:background="@drawable/remove_button_bg"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_below="@id/cartPrice"/>-->
+
+<!--            </RelativeLayout>-->
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

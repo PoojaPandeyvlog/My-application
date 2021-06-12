@@ -1,15 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.suraksha">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_logo_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Suraksha">
-        <activity android:name=".SignUpActivity"></activity>
+        android:theme="@style/Theme.Suraksha"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".AlertActivity"
+            android:parentActivityName=".HomeActivity"/>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".TipsActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".OrdersActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".ConfirmOrderActivity"
+            android:parentActivityName=".CartActivity" />
+        <activity
+            android:name=".ReportsActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".ContactsActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".CartActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".CloseFriendsActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".LocationActivity"
+            android:label="@string/title_activity_near_me"
+            android:parentActivityName=".ContactsActivity" />
+        <activity
+            android:name=".SirenActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".HelplinesActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>

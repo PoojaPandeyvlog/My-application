@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:src="@drawable/ic_police"
+            android:layout_weight="1"
+            android:layout_toStartOf="@id/crimeTextView"
+            android:id="@+id/policeIcon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report a Crime"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/crimeTextView"
+            android:textStyle="bold"
+            android:textColor="@color/pink_5"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/crimeName"
+            android:hint="Enter your name"
+            android:background="@drawable/edit_text_bg"
+            android:textColorHint="@color/dark_grey"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:padding="15dp"
+            android:drawablePadding="5dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/crimeCulprit"
+            android:hint="Enter culprit's name"
+            android:layout_below="@id/crimeName"
+            android:background="@drawable/edit_text_bg"
+            android:textColorHint="@color/dark_grey"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:padding="15dp"
+            android:drawablePadding="5dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/crimeDetails"
+            android:hint="Enter crime details"
+            android:layout_below="@id/crimeCulprit"
+            android:background="@drawable/text_area_bg"
+            android:textColorHint="@color/dark_grey"
+            android:layout_marginTop="10dp"
+            android:maxLines="3"
+            android:lines="3"
+            android:textColor="@color/black"
+            android:drawableStart="@drawable/ic_baseline_mode_24"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:padding="15dp"
+            android:drawablePadding="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/reportButton"
+            android:layout_below="@id/crimeDetails"
+            android:text="Report"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="16sp"
+            android:elevation="12dp"
+            android:shadowColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_bg"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
